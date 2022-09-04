@@ -1,69 +1,97 @@
 .app {
-    @apply bg-sky-50 w-full h-screen flex flex-col items-center;
+    @apply bg-sky-50;
+    @apply w-full h-screen;
+    @apply flex flex-col items-center;
 
     .cities {
-        @apply m-10;
+        @apply md:m-10 m-4;
 
         .city {
-            @apply m-10 uppercase sm:text-3xl text-xs font-extralight cursor-pointer;
+            @apply uppercase md:text-3xl text-xs font-extralight;
+            @apply md:m-10 m-2;
+            @apply cursor-pointer;
 
             &.active {
-                @apply font-medium text-sky-400 ease-out duration-300;
+                @apply font-medium text-sky-400;
+                @apply ease-out duration-300;
             }
         }
     }
 
     .forecast {
-        @apply border-4 border-white w-3/6 h-4/6 shadow-2xl rounded-xl flex flex-col;
+        @apply overflow-auto;
+        @apply border-4 border-white rounded-xl;
+        @apply flex flex-col;
+        @apply w-3/6 h-4/6;
+        @apply shadow-2xl;
 
         .today {
-            @apply border-b-4 border-white w-full h-3/5 flex flex-col justify-center items-center sm:text-4xl text-xl font-thin ease-out duration-300;
+            @apply flex flex-col justify-center items-center;
+            @apply md:text-4xl text-xl font-thin;
+            @apply w-full md:h-3/5 h-44;
+            @apply ease-out duration-300;
+            @apply border-b-4 border-white;
+
+            .day {
+                @apply md:m-4;
+            }
 
             .details {
-                @apply flex sm:flex-row flex-col justify-center items-center m-4 overflow-x-auto;
+                @apply flex md:flex-row flex-col justify-center items-center;
 
                 .icon {
-                    @apply sm:text-8xl text-4xl m-4 text-cyan-900;
+                    @apply md:text-8xl text-4xl text-cyan-900;
+                    @apply md:m-4 my-2;
                 }
 
                 .weather {
-                    @apply m-4 flex flex-col justify-center items-center;
+                    @apply flex flex-col justify-center items-center;
+                    @apply md:my-4 md:mr-4;
 
                     .temperature {
-                        @apply font-mono sm:text-5xl text-2xl m-2 font-medium;
+                        @apply font-mono font-medium;
+                        @apply md:text-5xl text-2xl;
+                        @apply md:m-4 my-2;
                     }
 
                     .description {
-                        @apply m-2 sm:text-2xl text-sm font-thin capitalize text-center;
+                        @apply md:text-2xl text-sm font-thin capitalize;
+                        @apply md:m-4 m-2;
+                        @apply text-center;
                     }
                 }
             }
         }
 
         .upcoming {
-            @apply w-full h-2/5 flex sm:flex-row flex-col overflow-y-auto;
+            @apply flex md:flex-row flex-col;
+            @apply w-full h-2/5;
 
             .card {
-                @apply h-full sm:w-1/4 w-full flex flex-col justify-center items-center;
+                @apply flex flex-col justify-center items-center;
+                @apply md:h-auto md:w-1/4 w-full h-44;
 
                 &:not(:last-child) {
-                    @apply sm:border-r-4 border-b-4 border-white;
+                    @apply md:border-r-4 md:border-b-0 border-b-4 border-white;
                 }
 
                 .day {
-                    @apply m-3 font-thin text-xl;
+                    @apply my-3 font-thin text-xl;
                 }
                 .icon {
-                    @apply m-3 text-5xl text-cyan-900;
+                    @apply my-3 text-5xl text-cyan-900;
                 }
                 .temperature {
-                    @apply m-3 font-mono text-2xl font-medium;
+                    @apply my-3 font-mono text-2xl font-medium;
                 }
             }
         }
     }
 
     .loader {
-        @apply animate-spin h-10 w-10 m-auto border-t-2 border-r-2 border-sky-500 rounded-full;
+        @apply border-t-2 border-r-2 border-sky-500 rounded-full;
+        @apply h-10 w-10;
+        @apply animate-spin;
+        @apply m-auto;
     }
 }
