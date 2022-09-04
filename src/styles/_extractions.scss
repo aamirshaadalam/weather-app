@@ -5,7 +5,7 @@
         @apply m-10;
 
         .city {
-            @apply m-10 uppercase text-3xl font-extralight cursor-pointer;
+            @apply m-10 uppercase sm:text-3xl text-xs font-extralight cursor-pointer;
 
             &.active {
                 @apply font-medium text-sky-400 ease-out duration-300;
@@ -17,37 +17,37 @@
         @apply border-4 border-white w-3/6 h-4/6 shadow-2xl rounded-xl flex flex-col;
 
         .today {
-            @apply border-b-4 border-white w-full h-3/5 flex flex-col justify-center items-center text-4xl font-thin ease-out duration-300;
+            @apply border-b-4 border-white w-full h-3/5 flex flex-col justify-center items-center sm:text-4xl text-xl font-thin ease-out duration-300;
 
             .details {
-                @apply flex flex-row justify-center items-center m-4;
+                @apply flex sm:flex-row flex-col justify-center items-center m-4 overflow-x-auto;
 
                 .icon {
-                    @apply text-8xl m-4 text-cyan-900;
+                    @apply sm:text-8xl text-4xl m-4 text-cyan-900;
                 }
 
                 .weather {
-                    @apply m-4;
+                    @apply m-4 flex flex-col justify-center items-center;
 
                     .temperature {
-                        @apply font-mono text-5xl m-2 font-medium;
+                        @apply font-mono sm:text-5xl text-2xl m-2 font-medium;
                     }
 
                     .description {
-                        @apply m-2 text-2xl font-thin capitalize;
+                        @apply m-2 sm:text-2xl text-sm font-thin capitalize text-center;
                     }
                 }
             }
         }
 
         .upcoming {
-            @apply w-full h-2/5 flex flex-row;
+            @apply w-full h-2/5 flex sm:flex-row flex-col overflow-y-auto;
 
             .card {
-                @apply h-full w-1/4 flex flex-col justify-center items-center;
+                @apply h-full sm:w-1/4 w-full flex flex-col justify-center items-center;
 
                 &:not(:last-child) {
-                    @apply border-r-4 border-white;
+                    @apply sm:border-r-4 border-b-4 border-white;
                 }
 
                 .day {
