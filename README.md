@@ -12,3 +12,6 @@ The API returns multiple forecasts for a 5-day period with 3-hour step. For the 
 - `REACT_APP_API_KEY = <your API key>`
 - Install dependencies by executing `npm install` command.
 - Execute `npm start` to start the app.
+
+## Working Demo
+You can access the working demo of the app [here](https://weather-app-xi-lilac.vercel.app/)
