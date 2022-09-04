@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .app {
-  @apply bg-sky-50 w-full h-screen flex flex-col items-center;
+  @apply bg-sky-100 w-full h-screen flex flex-col items-center;
 
   .cities {
     @apply m-10;
@@ -27,18 +27,18 @@
         @apply flex flex-row justify-center items-center m-4;
 
         .icon {
-          @apply text-9xl m-4 text-cyan-900;
+          @apply text-8xl m-4 text-cyan-900;
         }
 
         .weather {
           @apply m-4;
 
           .temperature {
-            @apply font-mono text-6xl m-2 font-medium;
+            @apply font-mono text-5xl m-2 font-medium;
           }
 
           .description {
-            @apply m-2 text-3xl font-thin capitalize;
+            @apply m-2 text-2xl font-thin capitalize;
           }
         }
       }
