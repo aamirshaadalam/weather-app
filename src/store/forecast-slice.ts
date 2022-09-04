@@ -27,7 +27,7 @@ const forecastSlice = createSlice({
 
 export default forecastSlice.reducer;
 
-const BASE_URL = `https://api.openweathermap.org/data/2.5/forecast?units=metric&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`;
+const BASE_URL = `https://api.openweathermap.org/data/2.5/forecast?units=metric&appid=${process.env.REACT_APP_API_KEY}`;
 
 export const fetchForecast = createAsyncThunk('forecast/fetchForecast', async (city: ICity, { rejectWithValue }) => {
   try {

@@ -1,7 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import citiesReducer from './cities-slice';
 import forecastReducer from './forecast-slice';
-// import thunkMiddleware from 'redux-thunk';
 
 const rootReducer = combineReducers({
   cities: citiesReducer,
