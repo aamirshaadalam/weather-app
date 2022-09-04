@@ -1,4 +1,10 @@
 # Sample Weather App - React
+This application displays the real-time weather for Ottawa, Moscow and Tokyo using *openweathermap* API.
+
+The API returns multiple forecasts for a 5-day period with 3-hour step. For the sake of simplicity, the app uses the following logic to show the weather data.
+- For the current day, show the forecast that is closest to the current time.
+- For future days, show the forecast for 12:00PM for the corresponding day.
+
 ## How to setup development environment?
 - Clone this repository.
 - Navigate to root folder.
