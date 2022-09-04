@@ -1,63 +1,58 @@
 .app {
-    @apply bg-sky-50;
-    @apply w-full h-screen;
-    @apply flex flex-col items-center;
+    @apply bg-sky-50 w-full h-screen 
+    flex flex-col items-center;
 
     .cities {
         @apply md:m-10 m-4;
 
         .city {
-            @apply uppercase md:text-3xl text-xs font-extralight;
-            @apply md:m-10 m-2;
-            @apply cursor-pointer;
+            @apply uppercase md:text-3xl text-xs 
+            font-extralight md:m-10 m-2 cursor-pointer;
 
             &.active {
-                @apply font-medium text-sky-400;
-                @apply ease-out duration-300;
+                @apply font-medium text-sky-400 
+                ease-out duration-300;
             }
         }
     }
 
     .forecast {
-        @apply overflow-auto;
-        @apply border-4 border-white rounded-xl;
-        @apply flex flex-col;
-        @apply w-3/6 h-4/6;
-        @apply shadow-2xl;
+        @apply overflow-auto border-4 border-white 
+        rounded-xl flex flex-col w-3/6 h-4/6 shadow-2xl;
 
         .today {
-            @apply flex flex-col justify-center items-center;
-            @apply md:text-4xl text-xl font-thin;
-            @apply w-full md:h-3/5 h-44;
-            @apply ease-out duration-300;
-            @apply border-b-4 border-white;
+            @apply flex flex-col justify-center items-center
+            md:text-4xl text-xl font-thin
+            w-full md:h-3/5 h-44
+            ease-out duration-300
+            border-b-4 border-white;
 
             .day {
                 @apply md:m-4;
             }
 
             .details {
-                @apply flex md:flex-row flex-col justify-center items-center;
+                @apply flex md:flex-row flex-col 
+                justify-center items-center;
 
                 .icon {
-                    @apply md:text-8xl text-4xl text-cyan-900;
-                    @apply md:m-4 my-2;
+                    @apply md:text-8xl text-4xl 
+                    text-cyan-900 md:m-4 my-2;
                 }
 
                 .weather {
-                    @apply flex flex-col justify-center items-center;
-                    @apply md:my-4 md:mr-4;
+                    @apply flex flex-col justify-center 
+                    items-center md:my-4 md:mr-4;
 
                     .temperature {
-                        @apply font-mono font-medium;
-                        @apply md:text-5xl text-2xl;
-                        @apply md:m-4 my-2;
+                        @apply font-mono font-medium 
+                        md:text-5xl text-2xl
+                        md:m-4 my-2;
                     }
 
                     .description {
-                        @apply md:text-2xl text-sm font-thin capitalize;
-                        @apply md:m-4 m-2;
-                        @apply text-center;
+                        @apply md:text-2xl text-sm text-center 
+                        font-thin capitalize md:m-4 m-2;
                     }
                 }
             }
@@ -68,8 +63,8 @@
             @apply w-full h-2/5;
 
             .card {
-                @apply flex flex-col justify-center items-center;
-                @apply md:h-auto md:w-1/4 w-full h-44;
+                @apply flex flex-col justify-center items-center
+                md:h-auto md:w-1/4 w-full h-44;
 
                 &:not(:last-child) {
                     @apply md:border-r-4 md:border-b-0 border-b-4 border-white;
@@ -89,9 +84,7 @@
     }
 
     .loader {
-        @apply border-t-2 border-r-2 border-sky-500 rounded-full;
-        @apply h-10 w-10;
-        @apply animate-spin;
-        @apply m-auto;
+        @apply border-t-2 border-r-2 border-sky-500 
+        rounded-full h-10 w-10 animate-spin m-auto;
     }
 }
