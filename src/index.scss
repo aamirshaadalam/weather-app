@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .app {
-  @apply bg-sky-100 w-full h-screen flex flex-col items-center;
+  @apply bg-sky-50 w-full h-screen flex flex-col items-center;
 
   .cities {
     @apply m-10;
